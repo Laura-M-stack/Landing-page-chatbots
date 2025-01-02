@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatMarket AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img class="img-logo" src="images/logo.png" alt="logo">
+            </div>
+            <nav>
+                <a href="#hero">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#acerca">Nosotras</a>
+                <a href="#planes">Planes</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Impulsá tu negocio con IA</h1>
+                <p>Transformá tus procesos con nuestras soluciones avanzadas en Inteligencia Artificial y automatización.</p>
+                <button class="btn-grad" onclick="document.querySelector('#contacto').scrollIntoView({behavior: 'smooth'})">
+                    Contactanos
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="images/img-hero.jpg" alt="Cliente feliz comprando" />
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="servicios" id="servicios">
+
+        <h2>Nuestros Servicios</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Chatbots Personalizados</h3>
+                <p>Creá experiencias únicas en WhatsApp, Instagram y sitios web con nuestros chatbots diseñados a medida.</p>
+            </div>
+            <div class="card">
+                <h3>Sitios Web y E-Commerce</h3>
+                <p>Diseñamos y desarrollamos tu presencia digital con tiendas en línea y páginas web profesionales.</p>
+            </div>
+            <div class="card">
+                <h3>Automatización con IA</h3>
+                <p>Optimiza tus procesos internos con nuestras soluciones avanzadas de inteligencia artificial.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="acerca-de" id="acerca">
+
+        <div class="texto">
+            <h2>Sobre Nosotras</h2>
+            <p>Somos un equipo apasionado de desarrolladoras tecnológicas dedicadas a transformar cómo las pequeñas y medianas empresas interactúan con sus clientes. Con nuestra experiencia en Inteligencia Artificial y Diseño Web, creamos soluciones innovadoras que impulsan el crecimiento y la eficiencia.</p>
+            <p>Nuestra misión es democratizar la tecnología para que negocios de todos los tamaños puedan aprovechar el poder de la IA y el diseño digital moderno.</p>
+        </div>
+        <div class="imagen">
+            <img src="images/Escritorio-de-home-office.jpg" alt="Nuestro equipo trabajando">
+        </div>
+    </section>
+    <section id="planes" class="planes-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Planes</h2>
+            <div class="planes-grid">
+                <!-- Plan Básico -->
+                <div class="plan-card">
+                    <h3 class="plan-title">Plan Básico</h3>
+                    <p class="plan-price">USD 200/mes</p>
+                    <ul class="plan-features">
+                        <li>Chatbots básicos</li>
+                        <li>Integración en redes sociales</li>
+                        <li>Soporte por email</li>
+                    </ul>
+                    <button class="btn-grad">Elegir Plan</button>
+                </div>
+                <!-- Plan Intermedio -->
+                <div class="plan-card featured">
+                    <h3 class="plan-title">Plan Intermedio</h3>
+                    <p class="plan-price">USD 350/mes</p>
+                    <ul class="plan-features">
+                        <li>Chatbots avanzados</li>
+                        <li>Integración en WhatsApp</li>
+                        <li>Soporte prioritario</li>
+                    </ul>
+                    <button class="btn-grad">Elegir Plan</button>
+                </div>
+                <!-- Plan Premium -->
+                <div class="plan-card">
+                    <h3 class="plan-title">Plan Premium</h3>
+                    <p class="plan-price">USD 500/mes</p>
+                    <ul class="plan-features">
+                        <li>Chatbots personalizados</li>
+                        <li>Integraciones avanzadas</li>
+                        <li>Soporte 24/7</li>
+                    </ul>
+                    <button class="btn-grad">Elegir Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="testimonios" id="testimonios">
+
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="contenedor">
+            <div class="card">
+                <img src="images/cliente1.png" alt="Cliente feliz">
+                <h3>Ana García</h3>
+                <p>"Gracias a los chatbots de esta empresa, hemos podido atender a nuestros clientes las 24 horas. ¡Un cambio total para nuestro negocio!"</p>
+            </div>
+            <div class="card">
+                <img src="images/cliente2.png" alt="Cliente satisfecho">
+                <h3>Juan López</h3>
+                <p>"El equipo fue increíblemente profesional y nos ayudó a crear un e-commerce moderno que ha duplicado nuestras ventas."</p>
+            </div>
+            <div class="card">
+                <img src="images/cliente3.png" alt="Cliente exitoso">
+                <h3>María Fernández</h3>
+                <p>"Su enfoque en soluciones personalizadas es exactamente lo que necesitábamos para crecer. ¡Recomendados al 100%!"</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="cta">
+      
+        <h2>¿Listo para transformar tu negocio?</h2>
+        <p>Hacé que tu empresa alcance su máximo potencial con nuestras soluciones tecnológicas.</p>
+        <p><strong>¡Comenzá hoy mismo!</strong></p>
+    </section>
+
+    <section class="contacto" id="contacto">
+
+        <h2>Contactanos</h2>
+        <form action="https://ejemplo.com/contacto" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribí tu nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Contanos en qué podemos ayudarte..." required></textarea>
+
+            <button class="btn-grad" type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Logo y descripción -->
+                <div class="footer-section">
+                    <h3 class="footer-logo">ChatMarket AI
+</h3>
+                    <p class="footer-description">
+                        Ofrecemos soluciones tecnológicas innovadoras para pequeñas y medianas empresas, ayudándolas a integrar IA en sus procesos y alcanzar el éxito.
+                    </p>
+                </div>
+                <!-- Enlaces rápidos -->
+                <div class="footer-section">
+                    <h4>Enlaces rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotras">Nosotras</a></li>
+                        <li><a href="#planes">Planes</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <!-- Contacto -->
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> contacto@chatmarketia.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Calle Falsa 123, Buenos Aires, Argentina</li>
+                    </ul>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="footer-section">
+                    <h4>Seguinos</h4>
+                    <div class="footer-socials">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link">X</i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <p>&copy; 2025 - ChatMarket AI - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>   
+</html>
