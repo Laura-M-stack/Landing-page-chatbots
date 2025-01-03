@@ -361,9 +361,8 @@ nav a:hover {
 }
 
 .testimonios .card img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
+    width: 100px;
+    height: 100px;
 }
 
 .testimonios .card h3 {
