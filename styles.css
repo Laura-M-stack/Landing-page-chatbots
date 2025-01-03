@@ -96,8 +96,8 @@ nav a:hover {
     animation: gradient 20s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 @keyframes gradient {
