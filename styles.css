@@ -12,7 +12,8 @@
     --color-white: #ffffff;
     --bg-cards-services: linear-gradient(to right bottom, #ddb0fc, #e1bbfc, #e5c6fc, #ead1fc, #eedcfc, #eedcfc, #eedcfc, #eedcfc, #ead1fc, #e5c6fc, #e1bbfc, #ddb0fc);
     --bg-plans: linear-gradient(to right bottom, #e2bbfe, #e5c9ff, #e9d6ff, #eee3ff, #f4efff, #f5efff, #f5f0ff, #f6f0ff, #f3e3ff, #f2d6ff, #f4c8ff, #f7b9ff);
-
+    --bg-hero: linear-gradient(315deg, rgb(102, 12, 200) 3%, rgba(60,132,206,1) 38%, rgb(48, 197, 238) 68%, rgb(163, 25, 255) 98%);
+    --bg-cta:linear-gradient(315deg, rgb(133, 22, 252) 3%, rgb(46, 150, 255) 38%, rgb(26, 205, 255) 68%, rgb(152, 0, 253) 98%);
 
      /* Transición suave para todas las propiedades */
      transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
@@ -23,7 +24,7 @@
     --color-primary: #38c5fd;
     --color-secondary: #0bc5e8;
     --color-accent: #29b07e;
-    --color-light: #000027;
+    --color-light: #09091b;
     --color-text: #e5e5e5;
     --color-gray: #707070;
     --color-light-gray: #272525;
@@ -32,7 +33,10 @@
     --color-white: #1e1e1e;
     --bg-cards-services: linear-gradient(to right bottom, #ab47f0, #883cc5, #67319b, #4a2573, #2f194c, #2f194c, #2f194c, #2f194c, #4a2573, #67319b, #883cc5, #ab47f0);
     --bg-plans: linear-gradient(to right bottom, #35005a, #2d054e, #250743, #1e0837, #19062c, #19062c, #19062c, #19062c, #1e0837, #250743, #2d054e, #35005a);
-    
+    --bg-hero: linear-gradient(315deg, #490097 3%, #001b92 38%, #04599a 68%, #8c0087 98%);
+    --bg-cta:linear-gradient(315deg, rgb(89, 0, 185) 3%, rgb(0, 90, 180) 38%, rgb(9, 202, 255) 68%, rgb(149, 0, 248) 98%);
+
+
 }
 
 body {
@@ -117,6 +121,63 @@ nav a:hover {
     transform: scale(1.1);
 }
 
+/* Oculta el ícono del menú hamburguesa por defecto */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: whitesmoke;
+    z-index: 1002;
+}
+
+/* Posiciona el menú hamburguesa */
+.hamburger {
+    position: relative;
+    margin-left: auto;
+    margin-right: 2rem;
+    padding: 0.5rem;
+}
+
+/* Estilo del menú en modo móvil */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Cambios para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Oculta los enlaces por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #000000;
+        opacity: 0.95;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links a {
+        margin: 1rem 0;
+        color: whitesmoke;
+    }
+
+    .nav-links a:hover {
+        color: var(--color-secondary);
+    }
+
+    .hamburger {
+        display: block; /* Muestra el menú hamburguesa */
+    }
+
+    /* Clase para mostrar el menú */
+    .nav-links.show {
+        display: flex;
+    }
+}
 
 .btn-grad {
    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%);
@@ -144,7 +205,7 @@ nav a:hover {
     justify-content: center;
     padding: 4rem 2rem;
     min-height: 100vh;
-    background: linear-gradient(315deg, rgb(102, 12, 200) 3%, rgba(60,132,206,1) 38%, rgb(48, 197, 238) 68%, rgb(163, 25, 255) 98%);
+    background: var(--bg-hero);
     animation: gradient 20s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
@@ -440,7 +501,7 @@ nav a:hover {
     padding: 4rem 2rem;
     color: whitesmoke;
     text-align: center;
-    background: linear-gradient(315deg, rgb(142, 80, 209) 3%, rgb(89, 144, 199) 38%, rgb(105, 203, 230) 68%, rgb(184, 88, 247) 98%);
+    background: var(--bg-cta);
     animation: gradient 20s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;

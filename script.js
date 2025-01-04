@@ -26,6 +26,17 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
+    // Menú hamburguesa
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    // Toggle para mostrar u ocultar el menú
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+});
+
 
 
 
