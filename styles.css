@@ -1,15 +1,38 @@
-
+/* Variables de color para modo claro */
 :root {
     --color-primary: #1a4573;
     --color-secondary: #03e0e3;
     --color-accent: #36d799;
-    --color-light: #F5F7FA;
+    --color-light:whitesmoke;
     --color-text: #333;
-    --color-gray:#8f9194;
+    --color-gray: #8f9194;
     --color-light-gray: #b7babf;
     --color-dark-gray: #474c53;
     --color-dark: #020c1a;
-    --color-white:#ffffff;
+    --color-white: #ffffff;
+    --bg-cards-services: linear-gradient(to right bottom, #ddb0fc, #e1bbfc, #e5c6fc, #ead1fc, #eedcfc, #eedcfc, #eedcfc, #eedcfc, #ead1fc, #e5c6fc, #e1bbfc, #ddb0fc);
+    --bg-plans: linear-gradient(to right bottom, #e2bbfe, #e5c9ff, #e9d6ff, #eee3ff, #f4efff, #f5efff, #f5f0ff, #f6f0ff, #f3e3ff, #f2d6ff, #f4c8ff, #f7b9ff);
+
+
+     /* Transición suave para todas las propiedades */
+     transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Variables de color para modo oscuro */
+:root.dark-mode {
+    --color-primary: #38c5fd;
+    --color-secondary: #0bc5e8;
+    --color-accent: #29b07e;
+    --color-light: #000027;
+    --color-text: #e5e5e5;
+    --color-gray: #707070;
+    --color-light-gray: #272525;
+    --color-dark-gray: #eee9e9;
+    --color-dark: #61aeff;
+    --color-white: #1e1e1e;
+    --bg-cards-services: linear-gradient(to right bottom, #ab47f0, #883cc5, #67319b, #4a2573, #2f194c, #2f194c, #2f194c, #2f194c, #4a2573, #67319b, #883cc5, #ab47f0);
+    --bg-plans: linear-gradient(to right bottom, #35005a, #2d054e, #250743, #1e0837, #19062c, #19062c, #19062c, #19062c, #1e0837, #250743, #2d054e, #35005a);
+    
 }
 
 body {
@@ -18,7 +41,36 @@ body {
     line-height: 1.6;
     color: var(--color-text);
     background-color: var(--color-light);
+    transition: background-color 0.5s ease, color 0.5s ease;
+
 }
+
+.theme-toggle {
+    z-index: auto;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+
+#dark-mode-toggle {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#dark-mode-toggle:active {
+    transform: scale(0.9);
+}
+
 
 h2 {
     font-size: 2rem;
@@ -52,7 +104,7 @@ header {
 }
 
 nav a {
-    color: var(--color-light);
+    color: whitesmoke;
     text-decoration: none;
     margin: 0 1rem;
     padding: 0.5rem;
@@ -75,7 +127,7 @@ nav a:hover {
    text-align: center;
    transition: 0.5s;
    background-size: 200% auto;
-   color: var(--color-light);            
+   color: whitesmoke;            
    border-radius: 30px;
    border: none;
    
@@ -123,20 +175,20 @@ nav a:hover {
 
 .hero-text {
     flex: 1;
-    color: var(--color-light);
+    color: whitesmoke;
     text-align: left;
-    animation: fadeIn 1s ease-out;
+    animation: fadeIn 2s ease-out;
     max-width: 30rem;
 }
 
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: 3.4rem;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -193,7 +245,7 @@ nav a:hover {
 }
 
 .servicios .card {
-    background-image: linear-gradient(to right bottom, #ddb0fc, #e1bbfc, #e5c6fc, #ead1fc, #eedcfc, #eedcfc, #eedcfc, #eedcfc, #ead1fc, #e5c6fc, #e1bbfc, #ddb0fc);    border: 1px solid var(--color-gray);
+    background-image: var(--bg-cards-services);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -232,7 +284,6 @@ nav a:hover {
     flex-wrap: wrap;
     align-items: center;
     padding: 4rem 2rem;
-    background-color: var(--color-white);
 }
 
 .acerca-de .texto {
@@ -279,14 +330,14 @@ nav a:hover {
 }
 
 .planes-section {
-    background-image: linear-gradient(to right bottom, #e2bbfe, #e5c9ff, #e9d6ff, #eee3ff, #f4efff, #f5efff, #f5f0ff, #f6f0ff, #f3e3ff, #f2d6ff, #f4c8ff, #f7b9ff);
+    background-image: var(--bg-plans);
     padding: 4rem 0;
     text-align: center;
 }
 
 .section-title {
     font-size: 2.5rem;
-    color: var(--color-text);
+    color: var(--color-dark);
     margin-bottom: 2rem;
 }
 
@@ -387,12 +438,13 @@ nav a:hover {
 
 .cta {
     padding: 4rem 2rem;
-    color: var(--color-white);
+    color: whitesmoke;
     text-align: center;
     background: linear-gradient(315deg, rgb(142, 80, 209) 3%, rgb(89, 144, 199) 38%, rgb(105, 203, 230) 68%, rgb(184, 88, 247) 98%);
     animation: gradient 20s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
+
 }
 
 @keyframes gradient {
@@ -411,7 +463,7 @@ nav a:hover {
     font-size: 2.5rem;
     margin-bottom: 1.2rem;
     line-height: 1;
-    color: var(--color-white);
+    color: whitesmoke;
 }
 
 .cta p {
@@ -431,7 +483,6 @@ nav a:hover {
 
 .contacto {
     padding: 4rem 2rem;
-    background-color: var(--color-light);
     text-align: center;
 }
 
@@ -444,7 +495,7 @@ nav a:hover {
 .contacto label {
     display: block;
     font-size: 1rem;
-    color: var(--color-dark-gray);
+    color: var(--color-text);
     margin-bottom: 0.5rem;
 }
 
@@ -456,6 +507,7 @@ nav a:hover {
     border: 2px double var(--color-secondary);
     border-radius: 5px;
     font-size: 1rem;
+    background-color: var(--color-light);
 }
 
 .contacto textarea {
@@ -471,8 +523,8 @@ nav a:hover {
 }
 
 .footer {
-    background: var(--color-dark);
-    color: var(--color-white);
+    background: #000812;
+    color: whitesmoke;
     padding: 3rem 4rem 1rem;
     font-size: 1rem;
 }
@@ -495,7 +547,7 @@ nav a:hover {
 
 
 .footer-description {
-    color: var(--color-light);
+    color: whitesmoke;
     line-height: 1.5;
     margin-bottom: 2rem;
     max-width: 200px;
@@ -527,7 +579,7 @@ nav a:hover {
 }
 
 .footer-links a {
-    color: var(--color-light);
+    color: whitesmoke;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -548,7 +600,7 @@ nav a:hover {
 }
 
 .social-link {
-    color: var(--color-light);
+    color: whitesmoke;
     font-size: 1.2rem;
     transition: color 0.3s;
     text-decoration: none;
@@ -568,5 +620,5 @@ nav a:hover {
     margin-top: 1rem;
     padding-top: 1rem;
     font-size: 0.8rem;
-    color: var(--color-white);
+    color: whitesmoke;
 }
