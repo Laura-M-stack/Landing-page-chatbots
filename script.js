@@ -26,16 +26,25 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-    // Menú hamburguesa
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.querySelector(".nav-links");
+ // Menú hamburguesa
+// Selecciona los elementos necesarios
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links a');
 
-    // Toggle para mostrar u ocultar el menú
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
+// Alterna la clase 'show' para desplegar el menú
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+// Cierra el menú al hacer clic en cualquier enlace
+navLinksItems.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
     });
 });
+
+
 
 
 
