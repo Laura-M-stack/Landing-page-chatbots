@@ -577,6 +577,8 @@ nav a:hover {
     border-radius: 5px;
     font-size: 1rem;
     background-color: var(--color-light);
+    font-family: 'Raleway', sans-serif;
+
 }
 
 .contacto textarea {
