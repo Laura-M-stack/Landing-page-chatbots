@@ -44,6 +44,104 @@ navLinksItems.forEach(link => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    ScrollReveal().reveal('.hero-text', {
+        origin: 'left',
+        distance: '50px',
+        duration: 1000,
+        delay: 200,
+        easing: 'ease-in-out',
+        reset: true
+    });
+    
+    ScrollReveal().reveal('.hero-image', {
+        origin: 'right',
+        distance: '50px',
+        duration: 1000,
+        delay: 400,
+        easing: 'ease-in-out',
+        reset: true
+    });
+
+    ScrollReveal().reveal('.card', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1000,
+        delay: 200,
+        easing: 'ease-in-out',
+        interval: 200,
+        reset: true
+    });
+
+    ScrollReveal().reveal('.texto', {
+        origin: 'left',
+        distance: '50px',
+        duration: 1000,
+        delay: 300,
+        easing: 'ease-in-out',
+        reset: true
+    });
+    
+    ScrollReveal().reveal('.imagen', {
+        origin: 'right',
+        distance: '50px',
+        duration: 1000,
+        delay: 300,
+        easing: 'ease-in-out',
+        reset: true
+    });
+    
+    ScrollReveal().reveal('.plan-card', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1000,
+        delay: 200,
+        interval: 200,
+        easing: 'ease-in-out',
+        reset: true
+    });
+    
+    ScrollReveal().reveal('.testimonios .card', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1000,
+        delay: 200,
+        interval: 200,
+        easing: 'ease-in-out',
+        reset: true
+    });
+
+    ScrollReveal().reveal('.cta h2, .cta p', {
+        origin: 'top',
+        distance: '50px',
+        duration: 1000,
+        delay: 200,
+        interval: 200,
+        easing: 'ease-in-out',
+        reset: true
+    });
+
+    ScrollReveal().reveal('.contacto form', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1000,
+        delay: 200,
+        easing: 'ease-in-out',
+        reset: true
+    });
+
+    ScrollReveal().reveal('.footer-section', {
+        origin: 'bottom',
+        distance: '30px',
+        duration: 1000,
+        delay: 200,
+        interval: 200,
+        easing: 'ease-in-out',
+        reset: true
+    });
+});
+
+
 
 
 
