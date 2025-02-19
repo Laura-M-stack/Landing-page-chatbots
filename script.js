@@ -44,6 +44,7 @@ navLinksItems.forEach(link => {
     });
 });
 
+// Animaciones de la página con ScrollReveal
 document.addEventListener("DOMContentLoaded", function() {
     ScrollReveal().reveal('.hero-text', {
         origin: 'left',
